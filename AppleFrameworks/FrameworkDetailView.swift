@@ -1,5 +1,5 @@
 //
-//  FrameWorkDetailView.swift
+//  FrameworkDetailView.swift
 //  AppleFrameworks
 //
 //  Created by Matheus Pinheiro on 10/04/24.
@@ -7,12 +7,45 @@
 
 import SwiftUI
 
-struct FrameWorkDetailView: View {
+struct FrameworkDetailView: View {
+    let framework: Framework
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "xmark")
+                        .foregroundStyle(Color(.label))
+                        .imageScale(.large)
+                        .frame(width: 44, height: 44)
+                }
+            }
+            .padding()
+            
+            Spacer()
+            
+            FrameworkTitleView(framework: framework)
+            
+            Text(framework.description)
+                .font(.body)
+                .padding()
+            
+            Spacer()
+            
+            Button {
+                let _ = print("Clicou")
+            } label: {
+                AFButton(title: "Learn More")
+            }
+            .padding(.horizontal, 50)
+            
+        }
     }
 }
 
 #Preview {
-    FrameWorkDetailView()
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }

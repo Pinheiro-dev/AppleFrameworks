@@ -15,12 +15,22 @@ struct FrameworkGridView: View {
         GridItem(.flexible())
     ]
     
+    @State var isPresent: Bool = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(MockData.frameworks) { framework in
+                        
                         FrameworkTitleView(framework: framework)
+                            .onTapGesture {
+                                print("Clicaa")
+                                isPresent.toggle()
+                            }
+                            .sheet(isPresented: $isPresent, content: {
+                                FrameworkDetailView(framework: framework)
+                            })
                     }
                 }
             }
