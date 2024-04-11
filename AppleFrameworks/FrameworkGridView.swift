@@ -9,14 +9,14 @@ import SwiftUI
 
 struct FrameworkGridView: View {
     
+    @StateObject var viewModel = FramewordGridViewModel()
+    
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-    
-    @State var isPresent: Bool = false
-    
+        
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -25,12 +25,16 @@ struct FrameworkGridView: View {
                         
                         FrameworkTitleView(framework: framework)
                             .onTapGesture {
-                                print("Clicaa")
-                                isPresent.toggle()
+                                viewModel.selectedFramework = framework
                             }
-                            .sheet(isPresented: $isPresent, content: {
-                                FrameworkDetailView(framework: framework)
-                            })
+                            .sheet(isPresented: $viewModel.isShowingDetailView){
+                                if let selectedFramework = viewModel.selectedFramework {
+                                    FrameworkDetailView(
+                                        framework: selectedFramework,
+                                        isShowingDetailView: $viewModel.isShowingDetailView
+                                    )
+                                }
+                            }
                     }
                 }
             }
