@@ -15,6 +15,7 @@
 		DD1FB8CF2BC783CC00E3A779 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FB8CE2BC783CC00E3A779 /* FrameworkDetailView.swift */; };
 		DD1FB8D12BC7881A00E3A779 /* AFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FB8D02BC7881A00E3A779 /* AFButton.swift */; };
 		DD1FB8D32BC78C6800E3A779 /* FramewordGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FB8D22BC78C6800E3A779 /* FramewordGridViewModel.swift */; };
+		DDCF819D2BCF5024003E7816 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF819C2BCF5024003E7816 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DD1FB8CE2BC783CC00E3A779 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 		DD1FB8D02BC7881A00E3A779 /* AFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFButton.swift; sourceTree = "<group>"; };
 		DD1FB8D22BC78C6800E3A779 /* FramewordGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramewordGridViewModel.swift; sourceTree = "<group>"; };
+		DDCF819C2BCF5024003E7816 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DD1FB8CE2BC783CC00E3A779 /* FrameworkDetailView.swift */,
 				DD1FB8D02BC7881A00E3A779 /* AFButton.swift */,
 				DD1FB8CA2BC771CE00E3A779 /* Framework.swift */,
+				DDCF819C2BCF5024003E7816 /* SafariView.swift */,
 				DD1FB8BF2BC7718B00E3A779 /* Assets.xcassets */,
 				DD1FB8C12BC7718B00E3A779 /* AppleFrameworks.entitlements */,
 				DD1FB8C22BC7718B00E3A779 /* Preview Content */,
@@ -157,6 +160,7 @@
 				DD1FB8D12BC7881A00E3A779 /* AFButton.swift in Sources */,
 				DD1FB8D32BC78C6800E3A779 /* FramewordGridViewModel.swift in Sources */,
 				DD1FB8BC2BC7718A00E3A779 /* AppleFrameworksApp.swift in Sources */,
+				DDCF819D2BCF5024003E7816 /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
